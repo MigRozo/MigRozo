@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;900&display=swap');
+
+:root{
+  --cw: #FDFDFD;
+  --cr: #FF3847;
+  --cb: #0E1A2A;
+  --fp: 'Rubik', sans-serif;
+}
+
+html{
+  font: 400 10px var(--fp);
+}
+body {
+  background: var(--cw);
+  color: var(--cb);
+  margin: 0;
+  font-size: 1.6rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

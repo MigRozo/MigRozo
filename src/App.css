@@ -1,0 +1,132 @@
+.container{
+    display: block;
+    width: 100%;
+    max-width: 60rem;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+.fx{ display: flex; }
+.fx.as{ align-items: flex-start; }
+.fx.ac{ align-items: center; }
+.fx.ae{ align-items: flex-end; }
+.fx.js{ justify-content: flex-start; }
+.fx.jc{ justify-content: center; }
+.fx.je{ justify-content: flex-end; }
+.fx.ja{ justify-content: space-around; }
+.fx.jb{ justify-content: space-between; }
+
+.titles{
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.header{
+    display: block;
+    width: 100%;
+    margin: 2rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+.header_logo{
+    display: block;
+    transition: transform 0.4s;
+}
+.header_logo:hover{
+    transform: scale(1.2);
+}
+.header_hamb{
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    transition: transform 0.4s;
+    cursor: pointer;
+    outline: 0;
+}
+.header_hamb:hover{
+    transform: scale(1.2);
+}
+.header_hamb svg{
+    display: block;
+}
+.hamb_poly{
+    fill: var(--cr);
+}
+.hamb_line{
+    stroke: var(--cw);
+    stroke-width: 4px;
+    transition: stroke-dashoffset 1s, stroke-dasharray 1s;
+}
+.hamb_top{
+    stroke-dasharray: 40 160;
+    transition-delay: 0.1s;
+}
+.hamb_mid{
+    stroke-dasharray: 40 80;
+}
+.hamb_bot{
+    stroke-dasharray: 40 220;
+    transition-delay: 0.2s;
+}
+.header_hamb.active .hamb_top{
+    stroke-dashoffset: -153;
+}
+.header_hamb.active .hamb_mid{
+    stroke-dasharray: 0 80;
+    stroke-dashoffset: -21;
+}
+.header_hamb.active .hamb_bot{
+    stroke-dashoffset: -216;
+}
+
+.intro{
+    display: block;
+    position: relative;
+}
+.intro::before{
+    background: var(--cr);
+    display: block;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    content: '';
+}
+.intro_row{
+    height: auto;
+    min-height: 100vh;
+    position: relative;
+    z-index: 2;
+}
+.intro_title{
+    width: 100%;
+    max-width: 38rem;
+    margin: auto;
+    font-size: 130px;
+    line-height: 0.8;
+}
+.intro_title span{
+    display: block;
+    margin: 1rem 0;
+    padding: 0 0.4em;
+    font-size: 0.14em;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.22em;
+    text-align: right;
+}
+.intro_scroll{
+    display: block;
+    position: absolute;
+    bottom: 5rem;
+    left: calc(50% - 2rem);
+    z-index: 2;
+}
