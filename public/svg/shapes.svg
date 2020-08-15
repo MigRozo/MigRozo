@@ -2,4 +2,7 @@
     <symbol id="hex">
         <path d="M 50 0 L 94 25 V 75 L 50 100 L 6 75 V 25 Z" />
     </symbol>
+    <symbol id="tri">
+        <path d="M 94 25 L 50 100 L 6 25 Z" />
+    </symbol>
 </svg>

@@ -100,6 +100,9 @@
     z-index: 1;
     content: '';
 }
+.intro_container{
+    position: relative;
+}
 .intro_row{
     height: auto;
     min-height: 100vh;
@@ -112,6 +115,8 @@
     margin: auto;
     font-size: 130px;
     line-height: 0.8;
+    position: relative;
+    z-index: 1;
 }
 .intro_title span{
     display: block;
@@ -123,10 +128,43 @@
     letter-spacing: 0.22em;
     text-align: right;
 }
+.intro_title .hex{
+    fill: var(--cw);
+    position: absolute;
+    top: -5rem;
+    left: -5rem;
+    z-index: -1;
+}
 .intro_scroll{
     display: block;
     position: absolute;
     bottom: 5rem;
     left: calc(50% - 2rem);
     z-index: 2;
+    transition: transform 0.4s;
+}
+.intro_scroll:hover{
+    transform: scale(1.1);
+}
+.intro_scroll .hex{
+    fill: var(--cb);
+}
+.intro_scroll .tri{
+    fill: var(--cw);
+}
+.intro_deco{
+    fill: var(--cp);
+    display: block;
+    position: absolute;
+    z-index: 1;
+    transform: rotate(90deg);
+}
+.intro_deco1{
+    top: 55%;
+    right: 20%;
+    z-index: 2;
+}
+.intro_deco2{
+    bottom: 10%;
+    left: 10%;
 }
