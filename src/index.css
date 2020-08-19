@@ -9,13 +9,13 @@
 }
 
 html{
-  font: 400 10px var(--fp);
+  font: 400 10px / 1.5 var(--fp);
 }
 body {
   background: var(--cw);
   color: var(--cb);
   margin: 0;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

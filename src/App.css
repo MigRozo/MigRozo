@@ -4,6 +4,13 @@
     max-width: 60rem;
     margin: auto;
     padding: 0 2rem;
+    position: relative;
+}
+
+.listReset{
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 .fx{ display: flex; }
@@ -21,6 +28,30 @@
     font-weight: 900;
     line-height: 1;
     text-transform: uppercase;
+}
+.titles::after{
+    content: '_';
+}
+
+.sect_row{
+    height: auto;
+    min-height: 100vh;
+}
+.sect_col{
+    padding: 5rem 0;
+    position: relative;
+    z-index: 2;
+}
+
+.deco{
+    fill: var(--cp);
+    display: block;
+    position: absolute;
+    z-index: 1;
+}
+.deco use{
+    transform: rotate(90deg);
+    transform-origin: 50% 50%;
 }
 
 .header{
@@ -100,12 +131,7 @@
     z-index: 1;
     content: '';
 }
-.intro_container{
-    position: relative;
-}
 .intro_row{
-    height: auto;
-    min-height: 100vh;
     position: relative;
     z-index: 2;
 }
@@ -116,7 +142,10 @@
     font-size: 130px;
     line-height: 0.8;
     position: relative;
-    z-index: 1;
+    z-index: 2;
+}
+.intro_title::after{
+    display: none;
 }
 .intro_title span{
     display: block;
@@ -152,19 +181,99 @@
 .intro_scroll .tri{
     fill: var(--cw);
 }
-.intro_deco{
-    fill: var(--cp);
-    display: block;
-    position: absolute;
-    z-index: 1;
-    transform: rotate(90deg);
-}
 .intro_deco1{
-    top: 55%;
+    top: 53%;
     right: 20%;
-    z-index: 2;
+    z-index: 3;
 }
 .intro_deco2{
     bottom: 10%;
     left: 10%;
+    z-index: 1;
+}
+
+.about{
+    background: var(--cb);
+    color: var(--cw);
+}
+.about_title{
+    color: var(--cr);
+}
+.about_title::after{
+    color: var(--cw);
+}
+
+.about{
+    background: var(--cb);
+    color: var(--cw);
+}
+.about_title{
+    color: var(--cr);
+}
+.about_title::after{
+    color: var(--cw);
+}
+.nums{
+    display: block;
+    margin: 5rem 0;
+    text-align: center;
+}
+.num_item{
+    color: var(--cr);
+    display: inline-block;
+    width: 50%;
+    font-size: 13rem;
+    line-height: 0.8;
+}
+.num_item span{
+    color: var(--cw);
+    display: block;
+    font-size: 0.24em;
+    text-transform: uppercase;
+    transform: translateY(-0.6em);
+}
+
+.tech{
+    display: block;
+    margin: 5rem 0;
+}
+.tech_icon{
+    display: block;
+    width: 6rem;
+    height: 6rem;
+    font-size: 2.4rem;
+    line-height: 2.7;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+.tech_icon .hex{
+    fill: var(--cr);
+    display: block;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.about_deco1{
+    top: 30%;
+    right: 0;
+}
+.about_deco2{
+    bottom: 20%;
+    left: 5%;
+    z-index: 3;
+}
+
+.contact{
+    background: var(--cr);
+    color: var(--cw);
+}
+.contact_title{
+    color: var(--cb);
+}
+.contact_title::after{
+    color: var(--cw);
 }
