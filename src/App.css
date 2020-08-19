@@ -24,7 +24,7 @@
 .fx.jb{ justify-content: space-between; }
 
 .titles{
-    font-size: 64px;
+    font-size: 4.8rem;
     font-weight: 900;
     line-height: 1;
     text-transform: uppercase;
@@ -48,6 +48,8 @@
     display: block;
     position: absolute;
     z-index: 1;
+    opacity: 0.9;
+    pointer-events: none;
 }
 .deco use{
     transform: rotate(90deg);
@@ -68,7 +70,7 @@
     transition: transform 0.4s;
 }
 .header_logo:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 .header_hamb{
     display: block;
@@ -81,7 +83,7 @@
     outline: 0;
 }
 .header_hamb:hover{
-    transform: scale(1.2);
+    transform: rotate(15deg);
 }
 .header_hamb svg{
     display: block;
@@ -137,9 +139,9 @@
 }
 .intro_title{
     width: 100%;
-    max-width: 38rem;
+    max-width: 2.95em;
     margin: auto;
-    font-size: 130px;
+    font-size: 10rem;
     line-height: 0.8;
     position: relative;
     z-index: 2;
@@ -159,9 +161,11 @@
 }
 .intro_title .hex{
     fill: var(--cw);
+    width: 1.55em;
+    height: auto;
     position: absolute;
-    top: -5rem;
-    left: -5rem;
+    top: -0.4em;
+    left: -0.4em;
     z-index: -1;
 }
 .intro_scroll{
@@ -222,7 +226,8 @@
     color: var(--cr);
     display: inline-block;
     width: 50%;
-    font-size: 13rem;
+    font-size: 6.4rem;
+    font-weight: 900;
     line-height: 0.8;
 }
 .num_item span{
@@ -239,10 +244,10 @@
 }
 .tech_icon{
     display: block;
-    width: 6rem;
-    height: 6rem;
-    font-size: 2.4rem;
-    line-height: 2.7;
+    width: 4rem;
+    height: 4rem;
+    font-size: 1.8rem;
+    line-height: 2.4;
     text-align: center;
     position: relative;
     z-index: 1;
@@ -276,4 +281,110 @@
 }
 .contact_title::after{
     color: var(--cw);
+}
+
+.social{
+    display: block;
+    margin: 3rem 0;
+}
+.social_item{
+    display: block;
+    margin-right: 3rem;
+}
+.social_link{
+    color: var(--cb);
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    font-size: 1.8rem;
+    line-height: 2.4;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+.social_link .hex{
+    fill: var(--cw);
+    display: block;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: transform 0.4s;
+}
+.social_link:hover{
+    color: var(--cr);
+}
+.social_link:hover .hex{
+    transform: scale(1.2) rotate(30deg);
+}
+.contact_deco1{
+    top: 45%;
+    right: 2%;
+}
+.contact_deco2{
+    bottom: 40%;
+    left: 7%;
+}
+.footer{
+    background: var(--cr);
+    color: var(--cw);
+    display: block;
+    padding: 1em 0;
+    font-size: 1rem;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    text-align: center;
+    text-transform: uppercase;
+}
+.footer .fa-heart{
+    font-size: 1.2em;
+    color: var(--cb);
+}
+.footer strong{
+    color: var(--cb);
+    font-weight: 900;
+}
+.co{
+    background: #003893;
+    width: 2rem;
+    height: 1rem;
+    margin: 0 0.3rem;
+    font-size: 0;
+    display: inline-flex;
+    justify-content: space-between;
+    box-shadow: 0 0 0 1px var(--cb);
+}
+.co::before,
+.co::after{
+    display: block;
+    height: 1rem;
+    content: '';
+}
+.co::before{
+    background: #FCD116;
+    width: 40%;
+}
+.co::after{
+    background: #CE1126;
+    width: 30%;
+}
+
+@media screen and (min-width: 767px) {
+    .titles{
+        font-size: 6.4rem;
+    }
+    .intro_title{
+        font-size: 13rem;
+    }
+    .num_item{
+        font-size: 13rem;
+    }
+    .tech_icon{
+        width: 6rem;
+        height: 6rem;
+        font-size: 2.4rem;
+        line-height: 2.7;
+    }
 }

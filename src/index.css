@@ -8,6 +8,9 @@
   --fp: 'Rubik', sans-serif;
 }
 
+*{
+  box-sizing: border-box;
+}
 html{
   font: 400 10px / 1.5 var(--fp);
 }
